@@ -10,7 +10,10 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  ItemCart(item)
+  
+  getCart().push(item)
+  return `${item} has been added to your cart.`
 }
 
 function viewCart() {
@@ -27,4 +30,11 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+}
+
+function ItemCart(item){
+  return {
+    itemName: item,
+    itemPrice: Math.floor(Math.random()*10)
+  }
 }
